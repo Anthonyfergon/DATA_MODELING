@@ -1,0 +1,1403 @@
+# _____________________________________________________________________
+#                      SQL_DATA_MODELING GUIDELINE
+#               Prepared by AnthonyCRENG28, Rabbit industries. 
+#                  COURSERA: INTRODUCTION TO DATABASES
+#                          Copyrights by Meta.                              
+# _____________________________________________________________________
+
+# ------------------------------------------------------------------- #
+#### TECHNICAL_CONCEPTS
+# ------------------------------------------------------------------- #
+
+https://www.simplilearn.com/how-to-become-data-modeler-article
+https://www.simplilearn.com/what-is-data-modeling-article
+
+#### DATA_MODELING_CONCEPT
+
+Data Modeling is the process of creating data models by which data associations (relational rules) and constrains are described and eventually coded to reuse.
+Data Modeling thus helps to increase consistency in naming, rules, semantics, and security, hence improving data analytics.
+The emphasis is on the need for availability and organization of data.
+Data modeling is the management of data within an organization.
+A Data Model un-complicates data into useful information that organizations can then use for decision-making and strategy.
+Data modeling evaluates and measures how an organization manages the flow of data in and out of the database management system.
+Data modeling creates and structures the space needed for your data.
+
+#### DATA_MODEL
+
+▪ Data Model gives us an idea that how the final system will look like after its complete implementation. It defines the data elements and the relationships between the data elements.
+▪ Data model shows how data is connected to each other logically.
+▪ Data Models are used to show how data is stored, connected, accessed and updated in the database management system.
+▪ Here, we use a set of symbols and text to represent the information so that members of the organization can communicate and understand it.
+▪ There are many data models being used nowadays but the Relational model is the most widely used model.
+
+#### DATA_MODELING_BUILDING_BLOCKS
+
+01. Entities:
+		An entity is anything about which data are to be collected and stored (e.g.: a person, place, thing, event)
+02. Attributes:
+		An attribute is a characteristic of an entity
+03. Relationships:
+		A relationship describes an association among (two or more) entities.
+		Types: 1:1, 1:[...],[...]:[...]
+04. Constrains:
+		Constraints are conditions applied on the data.It provides the data integrity.
+
+#### TYPES OF DATA_MODELING
+
+The process for designing a database includes the production of three major schemas (levels of data abstraction):
+
+01. Conceptual Model:
+		Visual representation of database concepts and the relationships between them identifying the high-level user view of data.
+02. Logical Model:
+		Defines the structure of the data entities and their relationships.
+		The logical data model is the basis for developing the physical model, which gives an abstraction of the database and helps to generate the schema.
+		Used for a specific project since the purpose is to develop a technical map of rules and data structures.
+03. Physical Model: 
+		This is a schema or framework defining how data is physically stored in a database.
+		It is used for database-specific modeling where the columns include exact types and attributes.
+		A physical model designs the internal schema.
+		
+Data Definition Language (DDL) allow us to convert these schemas into an active database.
+
+#### DATA MODELING PROCESS
+
+The first step in the data modeling process is identifying the use cases and logical data models.
+Then create a preliminary cost estimation. Identify the data access patterns and technical requirements.
+Create <DynamoDB> data model and queries.
+Validate the model and review the cost estimation. 
+
+####  DATA_MODELING_METHODOLOGIES
+
+01. Bottom-up Model: (Not recommended)
+		Also known as integration models, are created through re-engineering efforts.
+		This method usually starts with the existing structure forms for data and underlying reports.
+		This model may not be feasible for data sharing, considering that they are built without specific reference to all other departments/parts of the organization.
+
+02. Top-down Data Model: (Recommended)
+		Top-down data models are created through an abstract methodology, by garnering information from people SME users.
+		The system for this data model may not implement in all entities, but the model does serve as a brilliant template or reference point.
+		
+#### DATA_MODELING_EXAMPLES
+
+01. ER (Entity Relationship) Model
+02. Relational Model:
+		Arranges the data into tables. The tables have columns and rows, each cataloging an attribute present in the entity.
+		It makes relationships between data points easy to identify. 
+		
+#### DATA_MODELING_TECHNIQUES
+
+01. ERD (Entity Relationship Diagram) ****
+02. UML (Unified Modeling Language)
+03. Data Dictionary
+		
+#### DATA_MODELING_PREMISES
+
+Data has to be organized through:
+
+01. Data description:
+		The goal of the Data Description Document is to record all information about the data files and their contents,
+		so that someone can use the data in a future research project and understand the data's content and structure.
+		
+02. Data semantics:
+		Semantic data is data that has been structured to add meaning to the data. 
+		This is done by creating data relationships between the data entities to give truth to the data and the needed importance for data consumption. 
+		Semantic data helps with the maintenance of the data consistency relationship between the data.
+		
+03. Consistency Constraints of Data:
+		Constraints are used to limit the type of data that can go into a table.
+		This ensures the accuracy and reliability of the data in the table.
+		If there is any violation between the constraint and the data action, the action is aborted.
+		Constraints can be column level or table level.
+		
+#### THE IMPORTANCE OF DATA MODELING
+
+Data modeling is a necessary foundational work.
+It allows data to be easily stored in a database and positively impacts data analytics.
+It is critical for data management, data governance, and data intelligence. 
+It means better documentation of data sources, higher quality and clearer scope of data use with faster performance and few errors.
+From the regulatory compliance view, data modeling ensures that an organization adheres to governmental laws and applicable industry regulations.
+It empowers employees to make data-driven decisions and strategies.
+		
+#### DATA_DESCRIPTION_REPORT
+https://www.ibm.com/docs/ro/spss-modeler/18.0.0?topic=data-writing-description-report
+		
+To proceed effectively with your data mining project, consider the value of producing an accurate data description report using the following metrics:
+
+01. Data Quantity
+		What is the format of the data?
+		Identify the method used to capture the data--for example, ODBC.
+		How large is the database (in numbers of rows and columns)?
+				
+02. Data Quality
+		Does the data include characteristics relevant to the business question?
+		What data types are present (symbolic, numeric, etc.)?
+		Did you compute basic statistics for the key attributes? What insight did this provide into the business question?
+		Are you able to prioritize relevant attributes? If not, are business analysts available to provide further insight?
+
+#### DATA_MODELERS_ANALYSTS
+Data modelers are required to be more apt at the logical side of things. The skills required for data modeling include the following:
+
+01. Conceptual Design
+02. Abstract Thinking
+03. User communication
+04. Internal communication
+05. Th person who has the proven ability to think conceptually and abstractly, will be considered perfect as a data modeler.
+
+#### DATA MODELS IN DBMS
+Detailed info here: https://trulykasodiya.medium.com/data-model-b3607993e168#:~:text=The%20basic%20building%20blocks%20of,such%20as%20customers%20or%20products.
+Hierarchical Model
+Network Model
+Entity-Relational Model
+Relational Model
+Object-Oriented Data Model
+
+#### DATA_MINING
+
+Data mining is the process of finding anomalies, patterns and correlations within large data sets to predict outcomes. 
+Using a broad range of techniques, you can use this information to increase revenues, cut costs, improve customer relationships, reduce risks and more.
+
+Data mining allows you to:
+01. Sift through all the chaotic and repetitive noise in your data.
+02. Understand what is relevant and then make good use of that information to assess likely outcomes.
+03. Accelerate the pace of making informed decisions.
+
+#### DATA
+Facts and figures.
+
+#### DATABASE
+A form of electronic storage that holds data organized systematically (manageable, efficient, secure)
+Contains one or more tables.
+Web_Sources:
+    01. https://www.oracle.com/uk/database/what-is-database/
+    02. https://www.javatpoint.com/types-of-databases
+    03. https://www.ibm.com/cloud/learn/relational-databases
+    04. https://www.tutorialspoint.com/Types-of-databases
+    05. http://graphdatamodeling.com/GraphDataModeling/History.html
+    
+#### DATABASE TASKS
+Storage Data
+Form Relationships
+Filter Data
+Search Data 
+Perform CRUD Ops (CRUD=Create-Read-Update-Delete)
+
+#### RELATIONAL_MODEL
+Relational Model represents how data is stored in Relational Databases.
+A relational database stores data in the form of relations (tables).
+Table is conformed by Rows and Columns.
+A table is the most basic type of database object in relational databases.
+https://www.oracle.com/database/what-is-a-relational-database/
+https://www.scaler.com/topics/dbms/relational-model-in-dbms/
+https://www.ibm.com/docs/en/ida/9.1.1?topic=entities-primary-foreign-keys
+https://opentextbc.ca/dbdesign01/chapter/chapter-8-entity-relationship-model/
+
+#### TABLE_RELATION
+Contains tuples and attributes
+
+#### ROW / TUPLE / INSTANCES
+Rows are called instances in Relational Databases.
+A set of fields which generally represent an object like a person or a music track.
+
+#### COLUMNS / ATTRIBUTES / VARIABLES
+Attributes are objects(Columns) that are contained in Master Data Services entities.
+Attribute values describe the members of the entity.
+
+#### RECORDS
+Instances encapsulates record information.
+
+#### TYPES OF KEYS
+
+#### Key_Attribute (Primary_Key)
+aka Primary Key.
+Aim: Identify a specific record of data in a relational database.
+
+#### Candidate_Key
+Any attribute that contains a unique value in each row of the table.
+
+#### Composite_Key
+A key composed of two or more attributes to form a unique value in each new row.
+
+#### Foreign_Key
+Is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table.
+Aim: Is used to connect tables.
+
+#### Alternate_Key
+A candidate key not selected as the primary key.
+
+#### ACID_PROPERTIES
+
+#### Atomicity:
+		Entire transaction takes place at once or doesnt happen at all.
+		All changes to data are performed as if they are a single operation. That is, all the changes are performed, or none of them are.
+#### Consistency:
+		The DB must be consistent before and after the transaction.
+		Data remains in a consistent state from state to finish, reinforcing data integrity.
+#### Isolation:
+		Multiple transactions occur independently without any interference.
+		The intermediate state of a transaction is not visible to other transactions, and as a result, transactions that run concurrently appear to be serialized.
+#### Durability:
+		The changes of a succesful transaction occurs even if the system failure occurs.
+		After the successful completion of a transaction, changes to data persist and are not undone, even in the event of a system failure.
+
+#### TYPE_OF_DATABASES
+
+#### Object_Oriented_Databases:
+    Stores Structured Data in Tables.
+    Relational-Databases.
+    Examples: Snowflake, MS_SQL, PostgreSQL, ORACLE.
+    
+#### Graph_Databases: 
+    Stores nodes and relationships instead of tables, or documents.
+    NoSQL (Non-Relational Databases).
+    Examples: NEO4J, MS_COSMOS, AWS_NEPTUNE, IBM_GRAPH, REDIS, APACHE_GIGRAPH.
+    
+#### Document_Databases: 
+    Stores Unstructured Data in Documents and Collections (JSON & XML)
+    NoSQL (Non-Relational Databases).
+    Examples: MongoDB, Mongo_Atlas(SAAS), AWS_Dynamo, GCP_Cloud_Firestone, IBM_Cloudant, Redis.
+    
+#### Hosting_Databases
+01. On Premises
+02. In the Cloud (SAAS)
+
+#### SQL
+SQL stands for Structured Query Language, which is a standardised language for interacting with RDBMS (Relational Database Management System)
+Aim: Interact with Structured data on Databases.
+SQL is used to perform C.R.U.D (Create, Retrieve, Update & Delete) operations on relational databases.
+
+#### SQL_PROCESS
+Aim: Changes SQL instructions into a form understood by the Database.
+01. When an SQL command is executing for any RDBMS, then the system figure out the best way to carry out the request and the SQL engine determines that how to interpret the task.
+02. In the process, various components are included. These components can be optimization Engine, Query engine, Query dispatcher, classic, etc.
+03. All the non-SQL queries are handled by the classic query engine, but SQL query engine won't handle logical files.
+04. What is a Query: A Query is a set of instructions given to the database management system, which tells RDBMS what information you would like to get, insert, update or delete from the database.
+
+Web_Sources:
+01. https://www.javatpoint.com/dbms-sql-introduction
+02. https://beginnersbook.com/2018/11/introduction-to-sql/
+
+
+#### CRUD_OPERATIONS
+
+#### Create/Insert Daa
+#### Read/Select some Data
+#### Update data
+#### Delete data
+
+####  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> (DDL) Data Definition Language
+
+#### Create
+CREATE TABLE table_name (column_name1 datatype(size), column_name2 datatype(size), column_name3 datatype(size));
+
+#### Alter
+1. Syntax to add a column into a table:
+ALTER TABLE table_name ADD (column_name datatype(size)); 
+2. Syntax to add a primary key to a table:
+ALTER TABLE table_name ADD (column_name datatype(size)); 
+
+#### Drop
+DROP TABLE table_name; 
+
+#### Truncate
+Purpose: To remove all records from a table, which will empty the table but not delete the table itself. 
+TRUNCATE TABLE table_name;
+
+
+####  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> (DML) Data Manipulation Language
+
+#### Insert
+Purpose: To add records of data into an existing table. 
+INSERT INTO table_name (column1, column2, column3) VALUES (value1, value2, value3);
+
+#### Update
+UPDATE <Table_Name>
+SET <Date_Col_Name> = '2000-10-12'
+WHERE <ID_Col_Name> = 02;
+
+#### Delete
+DELETE FROM <Table_Name>
+WHERE <ID_Col_Name> = 03;
+
+
+#### >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> (DQL) Data Query Language (Read)
+
+#### Select
+Purpose: To retrieve data from tables in the database. 
+SELECT * FROM table_name;
+
+####  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> (DCL) Data Control Language
+
+#### Grant (Privileges)
+
+#### Revoke (Privileges)
+
+####  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> (TCL) Transaction Control Language
+
+#### Commit
+COMMIT Command to save all the work you have already done in the database. 
+
+#### Rollback
+ROLLBACK Command to restore a database to the last committed state.
+
+
+
+#### SQL_ADVANTAGES
+01. User_Friendly (Low Code)
+02. Standard Language (Available for many platforms)
+03. Portable Usage (Can be use on any hardware running any OS)
+
+#### PRIMITIVE_DATA_TYPES
+
+01. String: String of characters
+02. Numeric: Exact opr whole numbers
+03. Date and Time: Timestamp
+04. Binary: Images and Files
+
+#### SCHEMA
+Each table or relation in a database has its own schema.
+Schema simply means the structure.
+The structure includes:
+01. the name of the table or relation,  
+02. attributes,  
+03. names, 
+04. data type.
+
+#### INTEGRITY_CONSTRAINS
+
+#### Key_constrains
+In every table there should be one or more columns or fields that can be used to fetch data from tables.
+In other words, a primary key. The key constraint specifies that there should be a column, or columns, in a table
+that can be used to fetch data for any row. 
+This key attribute or primary key should never be NULL or the same for two different rows of data.
+For example, in the student table I can use the student ID to fetch data for each of the students. 
+No value of student ID is null, and it is unique for every row, hence it can be the key attribute.
+
+#### Domain_Constrains
+Domain constraints refer to the rules defined for the values that can be stored for a certain column. 
+For instance, you cannot store the home address of a student in the first name column. 
+Similarly, a contact number cannot exceed ten digits.
+
+#### Domain_Types
+Domains are data type definitions(constrains) that resolve to a primitive data type or another domain.
+01. char(n) (or character(n)): fixed-length character string, with user-specified length.
+02. varchar(n) (or character varying): variable-length character string, with user-specified maximum length.
+03. int or integer: an integer (length is machine-dependent).
+04. smallint: a small integer (length is machine-dependent).
+05. numeric(p, d): a fixed-point number with user-specified precision, consists of p digits (plus a sign) and d of p digits are to the right of the decimal point. E.g., numeric(3, 1) allows 44.5 to be stored exactly but not 444.5.
+06. real or double precision: floating-point or double-precision floating-point numbers, with machine-dependent precision.
+07. float(n): floating-point, with user-specified precision of at least n digits.
+08. date: a calendar date, containing four digit year, month, and day of the month.
+09. time: the time of the day in hours, minutes, and seconds.
+Web_Sources:
+01. https://www.ibm.com/docs/en/ida/9.1.1?topic=types-domain-models
+02. https://www2.cs.sfu.ca/CourseCentral/354/zaiane/material/notes/Chapter4/node31.html
+
+#### REFERENTIAL_INTEGRITY_CONSTRAINS
+When a table is related to another table via a foreign key column, then the referenced column value must exist in the other table.
+This means, according to the student and department examples, that values should exist in the student ID column in the student table because the two tables are related via the student ID column.
+
+#### THE_DATABASE_STRUCTURE
+The structure of a database consists of a set of key components. These include:      
+01. Tables or entities, where the data is stored. 
+02. Attributes which are details about the table or entity. In other words, attributes describe the table.  
+03. Fields, which are columns used to capture attributes. 
+04. A record, which is one row of details about a table or entity. 
+05. And the primary key, which is a unique value for an entity. 
+
+#### ENTITY_RELATIONSHIP_DIAGRAM (ERD)
+The logical structure of a database is represented using a diagram known as
+the Entity Relationship Diagram (ERD). It is a visual representation of how the database
+will be implemented into tables during physical database design, using a DBMS like MySQL or Oracle.ORACLE
+
+#### SQL_ARITHMETIC_OPERATORS
+#### SQL_COMPARISON_OPERATORS
+#### SQL_COMPARISON_OPERATORS
+
+https://www.w3schools.com/sql/sql_operators.asp
+https://www.javatpoint.com/sql-arithmetic-operators
+https://www.tutorialspoint.com/sql/sql-operators.htm
+https://www.w3resource.com/sql/comparison-operators/sql-comparison-operators.php
+
+#### DATABASE SCHEMA
+https://www.ibm.com/cloud/learn/database-schema
+https://www.educative.io/blog/what-are-database-schemas-examples
+https://www.lucidchart.com/pages/database-diagram/database-schema
+https://www.prisma.io/dataguide/intro/intro-to-schemas
+
+#### DATA NORMALIZATION AND ANOMALIES
+https://www.bbc.co.uk/bitesize/guides/zc93tv4/revision/2
+https://www.databasestar.com/database-normalization/
+https://opentextbc.ca/dbdesign01/chapter/chapter-12-normalization/
+
+#### CUBES
+
+#### STAR_SCHEMA 
+A star schema is a database schema used to store data in a star format. 
+This schema consists of a central table, called the "fact table," and a number of directly connected other tables, called "dimension tables." 
+The fact table contains information about metrics or measures, while the dimension tables contain information about descriptive attributes. 
+The star schema is very simple and easy to understand, making it ideal for cloud data warehousing and business intelligence applications.
+
+#### SNOWFLAKE_SHEMA (Recommended)
+A snowflake schema is a type of database schema that is used to store data in a more complex format than the star schema. 
+The snowflake schema consists of a central table, which is called the "fact table," and a number of other tables, which are called "dimension tables." 
+As with other schemas, the fact table contains information about events or facts, while the dimension tables contain information about the dimensions of those events or facts. 
+
+# 6 KEY DIFFERENCES BETWEEN STAR_SCHEMA VS SNOWFLAKE_SCHEMA:
+https://www.thoughtspot.com/data-trends/data-modeling/star-schema-vs-snowflake-schema
+
+A star schema has denormalized dimension tables, while a snowflake schema has normalized dimension tables.
+A star schema is easier to design and implement than a snowflake schema.
+A star schema can be more efficient to query than a snowflake schema, because there are fewer JOINs between tables.
+A star schema can require more storage space than a snowflake schema, because of the denormalized data.
+A star schema can be more difficult to update than a snowflake schema, because of the denormalized data.
+A star schema can be more difficult to troubleshoot than a snowflake schema, because of the denormalized data
+
+#### DIMENSION_TABLES	
+Una dimensión representa una característica de tu negocio 
+Examples: Clients, Products, Stores, Calendar, Suppliers
+Can contain hierarchical categories.
+Store thousands of Categorical_Records (except the Calendar_Table)
+
+#### FACT_TABLES	
+los hechos son métricas de interés que quieres desglosar mediante las dimensiones antes mencionadas.
+Examples: Vtas, Compras, Acct_Records
+Principal tables in a relational model
+Store millions of Numerical_Records.
+Contain Measures.
+
+#### SQL_NAMING_CONVENTIONS
+https://www.sqlshack.com/learn-sql-naming-conventions/
+A naming convention is a set of unwritten rules you should use if you want to increase the readability of the whole data model.
+A naming convention is a set of rules you decide to go with before you start modeling your database. 
+You’ll apply these rules while naming anything inside the database – tables, columns, primary and foreign keys, stored procedures, functions, views, etc.
+
+#### DATA NORMALIZATION
+Is the method of arranging the data in the database efficiently.
+It involves constructing tables and setting up relationships between those tables according to some certain rules. 
+The redundancy and inconsistent dependency can be removed using these rules in order to make it more flexible.
+Normalization is the technique of dividing the data into multiple tables to reduce data redundancy and inconsistency and to achieve data integrity.
+Normalization is used in OLTP system, which emphasizes on making the insert, delete and update anomalies faster
+
+#### DATA DENORMALIZATION
+Is the inverse process of normalization, where the normalized schema is converted into a schema which has redundant information.
+Denormalization is the technique of combining the data into a single table to make data retrieval faster.
+Denormalization is used in OLAP system, which emphasizes on making the search and analysis faster.
+
+#### LANDING_STAGE
+
+#### STAGING_TABLE
+
+#### TARGET_TABLE
+
+#### DATA_PIPELINE
+
+A data pipeline is a method in which raw data is ingested from various data sources and then ported to data store, like a data lake or data warehouse for analysis. 
+Before data flows into a data repository, it usually undergoes some data processing. 
+This is inclusive of data transformations, such as filtering, masking, and aggregations, which ensure appropriate data integration and standardization. 
+This is particularly important when the destination for the dataset is a relational database. 
+This type of data repository has a defined schema which requires alignment—i.e. matching data columns and types—to update existing data with new data. 
+
+There are 2 types of Data Pipelines:
+01. Batch Processing
+		ETL - ELT Processes Involved
+		Batch of data > Jobs > Workflows > Taget Tables > Data_Repository
+02. Streaming Data 
+		Real Time Data
+		Apache-Kafka (Broker, Messages)
+		
+#### ETL and ELT
+		The data journey from different source systems to a warehouse commonly happens in two ways — ETL and ELT. 
+		The former extracts and transforms information before loading it into centralized storage while the latter allows for loading data prior to transformation.
+
+#### BEST_PRACTICES
+
+#### Relational_Database_Structure 
+https://www.ibm.com/docs/en/control-desk/7.6.0?topic=design-relational-database-structure
+
+#### Database_Design_Basics
+https://support.microsoft.com/en-us/office/database-design-basics-eb2159cf-1e30-401a-8084-bd4f9c9ca1f5
+
+#### SQL_Querys_Definitive_Guide
+https://www.tutorialrepublic.com/sql-tutorial/sql-like-operator.php
+
+#### SQL_Tutorial_Dogmatic_Guide
+https://www.javatpoint.com/sql-tutorial
+
+#### SQL_Comprehensive_Tutorial
+https://www.tutorialspoint.com/sql/sql-syntax.html
+
+#### DATABASE
+		Manejan los datos transaccionales y los datos de cara a los procesos principales de la organización. 
+		Al ser transaccionales comúnmente manejan segundo a segundo operaciones de consulta, inserción, borrado y actualización de datos según los requerimientos del usuario.
+		Los Data Warehouse usan OLTP (OnLine Transactional Processing).
+		
+#### DATA LAKE
+		Concept: 
+			A repository that is capable to store a huge amount of data without maintaining any specified structure of the data. I uses OLTP (OnLine Transactional Processing).
+		Aim: 
+			Big_Data.
+		Data Storage: 
+			The Data Lake captures all types of data like structure, unstructured in their raw format.
+		Purpose: 
+			The purpose of the Data Lake is not fixed. Sometimes organizations have a future use-case in mind.
+		Users: 
+			All.
+		Pricing: 
+			Lesser.
+		Speed: 
+			Slower.
+		A repository that is capable to store a huge amount of data without maintaining any specified structure of the data.
+
+#### DATAWAREHOUSE
+		Concept: 
+			A central information repository enabling business intelligence and analytics. It uses OLAP (OnLine Analytical Processing).
+		Aim: 
+			Big Data.
+		Data Storage: 
+			It contains only high-quality data (Normalized Data).
+		Purpose: 
+			The data warehouse was designed and has data for some specific use-cases such as: Business Intelligence, Visualizations, and Batch Reporting.
+		Users: 
+			All.
+		Pricing: 
+			A bit costlier
+		Speed:
+			1000x faster than a Data Lake.
+		Examples:
+			AWS Redshift, GCP BigQuery, Az Synapse, Cloudera, Snowflake, Oracle.
+		Source:
+			https://www.javatpoint.com/data-warehouse-components
+		
+		Building_blocks:
+			Data Extraction
+			Data Staging (ETL)
+			Data Storage Layer (Data arrived Normalized)
+			Query Processing Layer
+			Information Delivery
+			Management Control
+			Cloud Services
+			
+		Benefits: 
+			Data Caching
+			Micro Partitions
+			Serverless
+			Light Learning Curve
+			Connectors and Integrations (cloud Services, Python, BI Tools, JDBC, ODBC, etc)	
+
+#### DATAMART
+	A data mart is a simple form of data warehouse focused on a single subject or line of business. 
+	With a data mart, teams can access data and gain insights faster.
+
+#### DATA LAKEHOUSE
+		Built as a processing engine managed by Apache Spark.
+		Hybrid architecture of a Data Lake and a Data Warehouse known as a Data Lakehouse.
+		It includes Delta Lake storage and a SQL engine called Databricks SQL Analytics.
+		
+#### <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<                PostgreSQL_Shell                      <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+# PostgreSQL & Powershell
+
+psql -U postgres
+psw = admin
+
+#### Terminal
+\l 																												--list databases
+CREATE USER <hamlet> WITH PASSWORD <'aceofspades'>;																--creating users
+CREATE DATABASE <ultra> WITH OWNER <'hamlet'>;																	--creating dastabases
+\dt																												--show relations(tables)
+\c <database_name>																								--choose your database
+\q																												--quit-exit
+USE [DB_Name] GO ALTER AUTHORIZATION ON DATABASE::[DB_Name] TO [sa] GO 											--diagrams
+
+#### <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<                   QUERIES                      <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+#### QUERY_OPTIMIZATION_TECHNIQUES
+Source_Document: C:\Users\Asus VivoBook\Dropbox\My PC (DESKTOP-GN5CQHE)\Desktop\Documentos\The Vault\SQL\SQL_Docs\Tips for Writing Efficient & Faster SQL Queries.pdf
+
+
+
+
+
+
+
+
+#### --------------------------------                     (DDL) Data Definition Language                -----------------------------------
+
+# Official Microsoft Guideline for DML Operations:
+https://learn.microsoft.com/en-us/sql/t-sql/lesson-1-creating-database-objects?view=sql-server-ver16
+
+CREATE DATABASE cm_devices;
+USE cm_devices; 																								--Use a DB in a terminal <e.g.: mysql>
+CREATE TABLE Users(code_id varchar(5) primary key not null, name varchar(128), email varchar(128));				--create tables
+CREATE TABLE Address (id int NOT NULL,  street VARCHAR(255), postcode VARCHAR(10) DEFAULT "HA97DE", town VARCHAR(30) DEFAULT "Harrow");     --DEFAULT Clause enables autopoulate specific data for a column
+SHOW tables;
+SHOW columns FROM address;																						--mysql
+show columns in table dt_test;																					--snowflake <en postgresql no existe>
+
+# INFER SCHEMA
+DESCRIBE dealer;				
+DESCRIBE EXTENDED dealer
+
+CREATE TABLE pg4e_debug (
+  id SERIAL,          -- SERIAL allow us to add a Serial Col.
+  query VARCHAR(4096),
+  result VARCHAR(4096),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY(id)
+);
+
+CREATE TABLE pg4e_result (
+  id SERIAL,	    -- SERIAL allow us to add a Serial Col.
+  link_id INTEGER UNIQUE,
+  score FLOAT,
+  title VARCHAR(4096),
+  note VARCHAR(4096),
+  debug_log VARCHAR(8192),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP
+);
+
+INSERT INTO customers (customerID, customerName, customerAddress) VALUES (1, "Jack", "115 Old street Belfast");
+
+SELECT nspname FROM pg_catalog.pg_namespace;																	
+
+DELETE FROM customers WHERE customerID = 3;																		--Delete a record from the db
+
+UPDATE
+
+TRUNCATE TABLE customers;																						--Delete all data from the table
+
+DROP
+...etc
+
+### --------------------------------                     DQL (Data Query Language)                -----------------------------------
+
+SELECT * FROM Table_Name
+SELECT Col_01, Col_02 FROM Table_Name
+SELECT column_name1 + column_name2 FROM table_name; 
+SELECT * FROM employee WHERE salary + allowance = 25000;
+SELECT tax * 2 FROM employee;
+SELECT TOP 10 * FROM Sales
+SELECT TOP 10 PERCENT* FROM Sales
+SELECT TOP 15 monto, num_comprobante, tipo_comprobante FROM dbo.PAGO ORDER BY monto DESC
+SELECT DISTINCT Col_01 FROM Table_Name ORDER BY Col_01 ASC
+SELECT COUNT (column01) FROM table
+SELECT COUNT * FROM table
+SELECT COUNT(DISTINCT name) FROM table
+SELECT name,choice FROM table WHERE name = 'David' AND choice='Red'
+SELECT name,choice FROM film WHERE rental_rate > 4 AND replacement_cost >= 19.99 AND rating = 'R';
+SELECT COUNT (*) FROM film WHERE rental_rate > 4 AND replacement_cost >= 19.99 AND rating = 'R';
+SELECT * FROM film WHERE rating != 'R';
+SELECT * FROM Date WHERE Year = 2017
+SELECT * FROM Date WHERE Year != 2017
+SELECT * FROM Date WHERE Year <> 2017 --except
+SELECT store_id,first_name,last_name FROM customer ORDER BY store_id DESC, first_name ASC
+SELECT * FROM payment WHERE amount != 0.00 ORDER BY payment_date DESC LIMIT 5;
+SELECT * FROM payment LIMIT 1
+SELECT COUNT (*) FROM payment WHERE amount NOT BETWEEN 8 AND 9;
+SELECT * FROM payment WHERE payment_date BETWEEN '2007-02-01' AND '2007-02-15'
+SELECT * FROM payment WHERE amount IN (0.99,1.985,1.99)
+SELECT * FROM customer WHERE first_name IN ('John','Jake','Julie')
+SELECT COUNT(*) FROM payment WHERE amount NOT IN (0.99,1.985,1.99)
+SELECT * FROM customer WHERE first_name LIKE 'J%' AND last_name LIKE 'S%'
+SELECT * FROM customer WHERE first_name LIKE 'A%' AND last_name NOT LIKE 'B%' ORDER BY last_name
+SELECT * FROM customer WHERE first_name ILIKE 'J%' AND last_name ILIKE 's%'
+SELECT ROUND(AVG(replacement_cost),2) FROM film
+SELECT COUNT (film_id) FROM film
+SELECT MAX(replacement_cost),MIN(replacement_cost) FROM film
+SELECT SUM(replacement_cost) FROM film
+SELECT customer_id,SUM(amount) FROM payment GROUP BY customer_id ORDER BY SUM(amount) DESC
+SELECT customer_id,COUNT(amount) FROM payment GROUP BY customer_id ORDER BY COUNT(amount) DESC
+SELECT staff_id,customer_id,SUM(amount) FROM payment GROUP BY staff_id,customer_id ORDER BY staff_id, customer_id
+SELECT DATE(payment_date), SUM(amount) FROM payment GROUP BY DATE(payment_date) ORDER BY SUM(amount) DESC LIMIT 5
+SELECT customer_id, SUM(amount) FROM payment WHERE customer_id NOT IN (184,87,477) GROUP BY customer_id HAVING SUM (amount) > 100
+SELECT store_id, COUNT(*) FROM customer GROUP BY store_id HAVING COUNT(customer_id) > 300
+SELECT customer_id,SUM(amount) AS Total_spent FROM payment GROUP BY customer_id HAVING SUM(amount) > 100
+SELECT COUNT(*) AS num_transaction FROM payment
+SELECT DISTINCT customer_id, payment_date FROM payment ORDER BY payment_date LIMIT 10
+SELECT film_id, title FROM film ORDER BY length LIMIT 5
+SELECT COUNT (length)  FROM film WHERE length <= 50
+SELECT COUNT (amount) FROM payment WHERE amount > 5
+SELECT COUNT (first_name) FROM actor WHERE first_name LIKE 'P%'
+SELECT COUNT(DISTINCT district) FROM address
+SELECT DISTINCT (district) FROM address
+SELECT COUNT (film_id) FROM film WHERE rating = 'R' AND replacement_cost BETWEEN 5 AND 15 
+SELECT title FROM film WHERE title LIKE '%Truman%'
+SELECT staff_id,COUNT(payment_id) FROM payment GROUP BY staff_id
+SELECT rating, ROUND(AVG(replacement_cost),2) FROM film GROUP BY rating
+SELECT customer_id, SUM(amount) FROM paymentGROUP BY customer_id ORDER BY SUM(amount) DESC LIMIT 5
+SELECT customer_id,COUNT(payment_id) FROM payment GROUP BY customer_id HAVING COUNT(payment_id) >= 40 ORDER BY customer_id ASC
+SELECT customer_id,staff_id,SUM(amount) FROM payment GROUP BY customer_id, staff_id HAVING SUM(amount) >= 100 AND staff_id=2 ORDER BY customer_id
+SELECT staff_id,customer_id,SUM(amount) FROM payment GROUP BY staff_id,customer_id HAVING SUM(amount) >= 110 AND staff_id = 2
+SELECT COUNT(title) FROM film WHERE title LIKE 'J%'
+SELECT customer_id,first_name,last_name,address_id FROM customer WHERE first_name LIKE 'E%' AND address_id < 500 ORDER BY customer_id DESC LIMIT 1
+SELECT  student_name,  score,   CASE  WHEN score >= 90 THEN 'A'  WHEN score >= 80 THEN 'B'  WHEN score >= 70 THEN 'C'  ELSE 'F'  END AS grade  FROM table_.students
+
+#### JOINS
+A JOIN is used in SQL to merge together certain rows from two (or more) tables.
+
+#### TYPES OF JOINS
+
+01. INNERJOIN
+		An INNER JOIN returns only the rows where there is a match in both tables.
+02. LEFT JOIN
+		A LEFT JOIN returns all rows from the left table (TABLE_A) even if there are no matches in the right table (TABLE_B).
+03. RIGHT JOIN
+		A RIGHT JOIN returns all rows from the right table (TABLE_B) even if there are no matches in the left table (Table_A).
+04. FULL JOIN
+		A FULL JOIN aka FULL OUTER JOIN returns all possible rows from each table where a match is found.
+05. CROSS JOIN
+		
+SELECT * FROM Table_A INNER JOIN Table_B ON Table_A.Colname_A = Table_B.Colname_B
+SELECT payment_id FROM payment INNER JOIN customer ON payment.customer_id = customer.customer_id
+SELECT payment_id,payment.customer_id,first_name FROM payment INNER JOIN customer ON payment.customer_id = customer.customer_id
+SELECT * FROM customer FULL OUTER JOIN payment ON customer.customer_id = payment.customer_id WHERE customer.customer_id IS null OR payment.payment_id IS null
+SELECT film.film_id, title, inventory_id, store_id FROM film LEFT JOIN inventory ON inventory.film_id = film.film_id WHERE inventory.film_id IS NULL
+SELECT district, email FROM address INNER JOIN customer ON address.address_id = customer.address_id WHERE district = 'California' 
+SELECT film.film_id,title,inventory_id,store_id FROM film LEFT JOIN inventory ON inventory.film_id = film.film_id WHERE inventory.film_id IS null
+SELECT district,email FROM address INNER JOIN customer ON address.address_id = customer.address_id WHERE district LIKE '%California%'
+SELECT product_id, product_name, store_id FROM production.products CROSS JOIN sales.stores ORDER BY product_name, store_id;
+
+Nested JOIN:
+SELECT title, first_name, last_name 
+FROM actor
+INNER JOIN film_actor
+ON actor.actor_id = film_actor.actor_id
+INNER JOIN film
+ON film_actor.film_id = film.film_id
+WHERE first_name = 'Nick' AND last_name = 'Wahlberg'
+
+#### <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<                   DATABRICKS + SPARKSQL + DELTALAKES                      <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+### --------------------------------                    DML                -----------------------------------
+
+# CREATE TABLES
+G6Y-HNRb$r#tzR& --cbank
+Xkws3$iC#pRZesm --yale
+CREATE TABLE pg4e_result (
+  id SERIAL,	                                    -- SERIAL allow us to add a Serial Col.
+  link_id INTEGER UNIQUE,
+  score FLOAT,
+  title VARCHAR(4096),
+  note VARCHAR(4096),
+  debug_log VARCHAR(8192),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP
+);
+
+DROP TABLE IF EXISTS People10M;
+CREATE TABLE People10M
+USING parquet
+OPTIONS (
+	path "/mnt/training/dataframes/people-10m.parquet",
+	header "true"),
+	inferSchema "true";
+
+DROP TABLE IF EXISTS ssaNames;
+CREATE TABLE ssaNames
+USING parquet
+OPTIONS (
+  path "/mnt/training/ssn/names.parquet",
+  header "true"
+)
+
+DROP TABLE IF EXISTS movieRatings;
+CREATE TABLE movieRatings (
+  userId INT,
+  movieId INT,
+  rating FLOAT,
+  timeRecorded INT
+) 
+USING csv
+OPTIONS (
+  path "/mnt/training/movies/20m/ratings.csv",
+  header "true"
+);
+
+DROP TABLE IF EXISTS outdoorProducts;
+CREATE TABLE outdoorProducts (
+  invoiceNo STRING,
+  stockCode STRING,
+  description STRING,
+  quantity INT,
+  invoiceDate STRING,
+  unitPrice DOUBLE,
+  customerID STRING,
+  countryName STRING
+) 
+USING csv
+OPTIONS (
+  path "/mnt/training/online_retail/data-001/data.csv",
+  header "true"
+);
+
+DROP TABLE IF EXISTS countryCodes;
+CREATE TABLE countryCodes
+USING parquet 
+OPTIONS (
+  path "/mnt/training/countries/ISOCountryCodes/ISOCountryLookup.parquet",
+  header "true"
+);
+
+
+DROP TABLE IF EXISTS standardDate;
+CREATE TABLE standardDate
+
+WITH padStrings AS
+(
+SELECT
+  InvoiceNo,
+  StockCode,
+  Description,
+  Quantity,
+  LPAD(month, 2, 0) AS month,
+  LPAD(day, 2, 0) AS day,
+  year,
+  UnitPrice,
+  Country
+FROM outdoorProducts
+)
+SELECT
+ InvoiceNo,
+  StockCode,
+  Description,
+  Quantity,
+  concat_ws("/", month, day, year) sDate,
+  UnitPrice,
+  Country
+FROM padStrings;
+
+
+### --------------------------------                     PARTITIONED TABLES                 -----------------------------------
+
+# A partition is composed of a subset of rows in a table that share the same value for a predefined subset of columns called the partitioning columns.
+# Using partitions can speed up queries against the table as well as data manipulation.
+# Most tables with less than 1 TB of data do not require partitions.
+# Databricks recommends all partitions contain at least a gigabyte of data
+
+DROP TABLE IF EXISTS bikeShare_partitioned;
+CREATE TABLE bikeShare_partitioned
+PARTITIONED BY (p_hr)
+  AS
+SELECT
+  instant,
+  dteday,
+  season, 
+  yr,
+  mnth,
+  hr as p_hr,
+  holiday,
+  weekday, 
+  workingday,
+  weathersit,
+  temp
+FROM
+  bikeShare
+
+
+
+### --------------------------------                     CREATE TEMPORARY VIEWS                -----------------------------------
+
+DROP TABLE IF EXISTS dealer;
+CREATE TEMP VIEW dealer (id, city, car_model, quantity) AS
+VALUES (100, 'Fremont', 'Honda Civic', 10),
+       (100, 'Fremont', 'Honda Accord', 15),
+       (100, 'Fremont', 'Honda CRV', 7),
+       (200, 'Dublin', 'Honda Civic', 20),
+       (200, 'Dublin', 'Honda Accord', 10),
+       (200, 'Dublin', 'Honda CRV', 3),
+       (300, 'San Jose', 'Honda Civic', 5),
+       (300, 'San Jose', 'Honda Accord', 8);
+
+CREATE OR REPLACE TEMPORARY VIEW PeopleSavings AS
+SELECT
+  firstName,
+  lastName,
+  year(birthDate) as birthYear,
+  salary,
+  salary * 0.2 AS savings
+FROM
+  People10M;
+  
+CREATE OR REPLACE TEMPORARY VIEW PeopleDistinctNames AS
+SELECT DISTINCT firstName
+FROM People10M
+  
+CREATE OR REPLACE TEMPORARY VIEW q2Result AS(
+SELECT
+  CAST(lastFinish as DATE) AS raceDate, --## to_date(lastFinish) AS raceDate
+  name,
+  winOdds,
+FROM raceResults
+ORDER BY winOdds DESC
+LIMIT 5
+);
+
+SELECT * FROM q2Result;
+
+
+CREATE OR REPLACE TEMPORARY VIEW q1Results AS
+SELECT CAST(discountId as long), code, 
+	CAST(CAST(price AS double) * 100 AS int) AS price
+FROM discounts;
+
+SELECT * FROM q1Results;
+
+CREATE OR REPLACE TEMPORARY VIEW q2Results AS
+  SELECT cast(active as boolean), cast(cents as double) / 100 as price
+  FROM discounts2;
+
+SELECT * FROM q2Results
+
+CREATE
+OR REPLACE TEMPORARY VIEW ratingsByMonth AS
+SELECT
+  ROUND(AVG(rating), 3) AS avgRating,
+  month(CAST(timeRecorded as timestamp)) AS month
+FROM
+  movieRatings
+GROUP BY
+  month;
+  
+CREATE OR REPLACE TEMPORARY VIEW sales AS
+SELECT
+  stockCode,
+  quantity,
+  unitPrice,
+  ROUND(quantity * unitPrice, 2) AS totalAmount,
+  countryName
+FROM
+  outdoorProducts
+WHERE
+ quantity > 0;
+
+CREATE
+OR REPLACE TEMP VIEW salesQuants AS
+SELECT
+  SUM(quantity) AS totalQuantity,
+  countryName
+FROM
+  sales
+GROUP BY
+  countryName
+ORDER BY
+  totalQuantity DESC;
+
+
+CREATE
+OR REPLACE TEMPORARY VIEW modCountryCodes AS
+SELECT
+  alpha3code,
+  REPLACE (        -- replace is a regex_function which allow us to concatenate multiple strings into one single string
+    EnglishShortName,
+    "United Kingdom of Great Britain and Northern Ireland",
+    "United Kingdom"
+  ) AS EnglishShortName
+FROM
+  countryCodes;
+
+
+CREATE OR REPLACE TEMPORARY VIEW q1Results AS 
+  WITH datesTable AS
+    (SELECT
+    CAST(Timestamp AS timestamp) AS date FROM timetable1)
+  SELECT date, 
+  year(date) AS year, 
+  month(date) AS month
+  FROM datesTable
+  WHERE month(date) =12;
+  
+SELECT * FROM q1Results;
+
+
+CREATE OR REPLACE TEMPORARY VIEW joined AS
+SELECT
+ People10m.firstName,
+ to_date(birthDate) AS date
+FROM People10m
+  JOIN ssaNames ON People10m.firstName = ssaNames.firstName;
+
+
+CREATE OR REPLACE TEMPORARY VIEW q4Results AS
+  SELECT * 
+  FROM (SELECT Year, YesNo, Amount
+        FROM (SELECT year(CAST(UTCTime AS timestamp)) as Year,
+                     YesNo,
+                     Amount 
+              FROM revenue4) 
+        WHERE Year > 2001 AND Year <= 2003)
+  PIVOT ( round( sum(Amount), 2) AS total FOR Year in (2002, 2003) );
+  
+  SELECT * FROM q4Results;
+  
+
+CREATE OR REPLACE TEMPORARY VIEW q6Results AS
+  SELECT 
+    COALESCE(itemName, "All items") AS itemName,
+    COALESCE(month(date), "All months") AS month,
+    ROUND(AVG(revenue), 2) as avgRevenue
+  FROM sales
+  GROUP BY ROLLUP (itemName, month(date))      --ROLLUP: Agrupa todas las posibles combinaciones de las Var especificadas (https://www.sqlservertutorial.net/sql-server-basics/sql-server-rollup/)
+  ORDER BY itemName, month;
+
+SELECT * FROM q6Results;
+
+
+CREATE OR REPLACE TEMPORARY VIEW q6Results AS
+  SELECT 
+    COALESCE(itemName, "All items") AS itemName,
+    COALESCE(month(date), "All months") AS month,
+    ROUND(AVG(revenue), 2) as avgRevenue
+  FROM sales
+  GROUP BY CUBE (itemName, month(date))      --CUBE: Combinaciones de categorias segun jerarquia (https://www.sqlservertutorial.net/sql-server-basics/sql-server-cube/)
+  ORDER BY itemName, month;
+
+SELECT * FROM q6Results;
+
+
+CREATE
+OR REPLACE TEMPORARY VIEW outdoorProducts AS
+SELECT
+  InvoiceNo,
+  StockCode,
+  COALESCE(Description, "Misc") AS Description,
+  Quantity,
+  SPLIT(InvoiceDate, "/")[0] month,
+  SPLIT(InvoiceDate, "/")[1] day,
+  SPLIT(SPLIT(InvoiceDate, " ")[0], "/")[2] year,
+  UnitPrice,
+  Country
+FROM
+  outdoorProductsRaw
+
+### --------------------------------                     Additional CREATE TABLE Examples                -----------------------------------
+
+
+# Source: https://docs.databricks.com/sql/language-manual/sql-ref-syntax-ddl-create-table-hiveformat.html
+
+--Use hive format
+CREATE TABLE student (id INT, name STRING, age INT) STORED AS ORC;
+
+--Use data from another table
+CREATE TABLE student_copy STORED AS ORC
+    AS SELECT * FROM student;
+
+--Specify table comment and properties
+CREATE TABLE student (id INT, name STRING, age INT)
+    COMMENT 'this is a comment'
+    STORED AS ORC
+    TBLPROPERTIES ('foo'='bar');
+
+--Specify table comment and properties with different clauses order
+CREATE TABLE student (id INT, name STRING, age INT)
+    STORED AS ORC
+    TBLPROPERTIES ('foo'='bar')
+    COMMENT 'this is a comment';
+
+--Create partitioned table
+CREATE TABLE student (id INT, name STRING)
+    PARTITIONED BY (age INT)
+    STORED AS ORC;
+
+--Create partitioned table with different clauses order
+CREATE TABLE student (id INT, name STRING)
+    STORED AS ORC
+    PARTITIONED BY (age INT);
+
+--Use Row Format and file format
+CREATE TABLE student (id INT, name STRING)
+    ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+    STORED AS TEXTFILE;
+
+--Use complex datatype
+CREATE EXTERNAL TABLE family(
+        name STRING,
+        friends ARRAY<STRING>,
+        children MAP<STRING, INT>,
+        address STRUCT<street: STRING, city: STRING>
+    )
+    ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' ESCAPED BY '\\'
+    COLLECTION ITEMS TERMINATED BY '_'
+    MAP KEYS TERMINATED BY ':'
+    LINES TERMINATED BY '\n'
+    NULL DEFINED AS 'foonull'
+    STORED AS TEXTFILE
+    LOCATION '/tmp/family/';
+
+--Use predefined custom SerDe
+CREATE TABLE avroExample
+    ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.avro.AvroSerDe'
+    STORED AS INPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat'
+        OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerOutputFormat'
+    TBLPROPERTIES ('avro.schema.literal'='{ "namespace": "org.apache.hive",
+        "name": "first_schema",
+        "type": "record",
+        "fields": [
+                { "name":"string1", "type":"string" },
+                { "name":"string2", "type":"string" }
+            ] }');
+
+--Use personalized custom SerDe(we may need to `ADD JAR xxx.jar` first to ensure we can find the serde_class,
+--or you may run into `CLASSNOTFOUND` exception)
+ADD JAR /tmp/hive_serde_example.jar;
+
+CREATE EXTERNAL TABLE family (id INT, name STRING)
+    ROW FORMAT SERDE 'com.ly.spark.serde.SerDeExample'
+    STORED AS INPUTFORMAT 'com.ly.spark.example.serde.io.SerDeExampleInputFormat'
+        OUTPUTFORMAT 'com.ly.spark.example.serde.io.SerDeExampleOutputFormat'
+    LOCATION '/tmp/family/';
+	
+	
+### --------------------------------                     Additional PARTITIONED TABLE examples                -----------------------------------
+# https://learn.microsoft.com/en-us/azure/databricks/sql/language-manual/sql-ref-partition
+
+-- Use the PARTTIONED BY clause in a table definition
+> CREATE TABLE student(university STRING,
+                       major      STRING,
+                       name       STRING)
+         PARTITIONED BY(university, major)
+
+> CREATE TABLE professor(name STRING)
+         PARTITIONED BY(university STRING,
+                        department STRING);
+
+-- Use the PARTITION specification to INSERT into a table
+> INSERT INTO student
+         PARTITION(university= 'TU Kaiserslautern') (major, name)
+         SELECT major, name FROM freshmen;
+
+-- Use the partition specification to add and drop a partition
+> CREATE TABLE log(date DATE, id INT, event STRING)
+     USING CSV LOCATION 'dbfs:/log'
+     PARTITIONED BY (date);
+
+> ALTER TABLE log ADD PARTITION(date = DATE'2021-09-10');
+
+> ALTER TABLE log DROP PARTITION(date = DATE'2021-09-10');
+
+-- Drop all partitions from the named university, independent of the major.
+> ALTER TABLE student DROP PARTITION(university = 'TU Kaiserslautern');
+
+
+-- A very basic PIVOT
+-- Given a table with sales by quarter, return a table that returns sales across quarters per year.
+> CREATE TEMP VIEW sales(year, quarter, region, sales) AS
+   VALUES (2018, 1, 'east', 100),
+          (2018, 2, 'east',  20),
+          (2018, 3, 'east',  40),
+          (2018, 4, 'east',  40),
+          (2019, 1, 'east', 120),
+          (2019, 2, 'east', 110),
+          (2019, 3, 'east',  80),
+          (2019, 4, 'east',  60),
+          (2018, 1, 'west', 105),
+          (2018, 2, 'west',  25),
+          (2018, 3, 'west',  45),
+          (2018, 4, 'west',  45),
+          (2019, 1, 'west', 125),
+          (2019, 2, 'west', 115),
+          (2019, 3, 'west',  85),
+          (2019, 4, 'west',  65);
+
+> SELECT year, region, q1, q2, q3, q4
+  FROM sales
+  PIVOT (sum(sales) AS sales
+    FOR quarter
+    IN (1 AS q1, 2 AS q2, 3 AS q3, 4 AS q4));
+ 2018  east  100  20  40  40
+ 2019  east  120  110  80  60
+ 2018  west  105  25  45  45
+ 2019  west  125  115  85  65
+
+-- The same query written without PIVOT
+> SELECT year, region,
+         sum(sales) FILTER(WHERE quarter = 1) AS q1,
+         sum(sales) FILTER(WHERE quarter = 2) AS q2,
+         sum(sales) FILTER(WHERE quarter = 3) AS q2,
+         sum(sales) FILTER(WHERE quarter = 4) AS q4
+  FROM sales
+  GROUP BY year, region;
+ 2018  east  100  20  40  40
+ 2019  east  120  110  80  60
+ 2018  west  105  25  45  45
+ 2019  west  125  115  85  65
+
+-- Also PIVOT on region
+> SELECT year, q1_east, q1_west, q2_east, q2_west, q3_east, q3_west, q4_east, q4_west
+    FROM sales
+    PIVOT (sum(sales) AS sales
+      FOR (quarter, region)
+      IN ((1, 'east') AS q1_east, (1, 'west') AS q1_west, (2, 'east') AS q2_east, (2, 'west') AS q2_west,
+          (3, 'east') AS q3_east, (3, 'west') AS q3_west, (4, 'east') AS q4_east, (4, 'west') AS q4_west));
+ 2018  100  105  20  25  40  45  40  45
+ 2019  120  125  110  115  80  85  60  65
+
+-- The same query written without PIVOT
+> SELECT year,
+    sum(sales) FILTER(WHERE (quarter, region) = (1, 'east')) AS q1_east,
+    sum(sales) FILTER(WHERE (quarter, region) = (1, 'west')) AS q1_west,
+    sum(sales) FILTER(WHERE (quarter, region) = (2, 'east')) AS q2_east,
+    sum(sales) FILTER(WHERE (quarter, region) = (2, 'west')) AS q2_west,
+    sum(sales) FILTER(WHERE (quarter, region) = (3, 'east')) AS q3_east,
+    sum(sales) FILTER(WHERE (quarter, region) = (3, 'west')) AS q3_west,
+    sum(sales) FILTER(WHERE (quarter, region) = (4, 'east')) AS q4_east,
+    sum(sales) FILTER(WHERE (quarter, region) = (4, 'west')) AS q4_west
+    FROM sales
+    GROUP BY year, region;
+ 2018  100  105  20  25  40  45  40  45
+ 2019  120  125  110  115  80  85  60  65
+
+-- To aggregate across regions the column must be removed from the input.
+> SELECT year, q1, q2, q3, q4
+  FROM (SELECT year, quarter, sales FROM sales) AS s
+  PIVOT (sum(sales) AS sales
+    FOR quarter
+    IN (1 AS q1, 2 AS q2, 3 AS q3, 4 AS q4));
+  2018  205  45  85  85
+  2019  245  225  165  125
+
+-- The same query without PIVOT
+> SELECT year,
+    sum(sales) FILTER(WHERE quarter = 1) AS q1,
+    sum(sales) FILTER(WHERE quarter = 2) AS q2,
+    sum(sales) FILTER(WHERE quarter = 3) AS q3,
+    sum(sales) FILTER(WHERE quarter = 4) AS q4
+    FROM sales
+    GROUP BY year;
+
+-- A PIVOT with multiple aggregations
+> SELECT year, q1_total, q1_avg, q2_total, q2_avg, q3_total, q3_avg, q4_total, q4_avg
+    FROM (SELECT year, quarter, sales FROM sales) AS s
+    PIVOT (sum(sales) AS total, avg(sales) AS avg
+      FOR quarter
+      IN (1 AS q1, 2 AS q2, 3 AS q3, 4 AS q4));
+ 2018  205  102.5  45  22.5  85  42.5  85  42.5
+ 2019  245  122.5  225  112.5  165  82.5  125  62.5
+
+-- The same query without PIVOT
+> SELECT year,
+         sum(sales) FILTER(WHERE quarter = 1) AS q1_total,
+         avg(sales) FILTER(WHERE quarter = 1) AS q1_avg,
+         sum(sales) FILTER(WHERE quarter = 2) AS q2_total,
+         avg(sales) FILTER(WHERE quarter = 2) AS q2_avg,
+         sum(sales) FILTER(WHERE quarter = 3) AS q3_total,
+         avg(sales) FILTER(WHERE quarter = 3) AS q3_avg,
+         sum(sales) FILTER(WHERE quarter = 4) AS q4_total,
+         avg(sales) FILTER(WHERE quarter = 4) AS q4_avg
+    FROM sales
+    GROUP BY year;
+
+> CREATE TEMP VIEW person (id, name, age, class, address) AS
+    VALUES (100, 'John', 30, 1, 'Street 1'),
+           (200, 'Mary', NULL, 1, 'Street 2'),
+           (300, 'Mike', 80, 3, 'Street 3'),
+           (400, 'Dan', 50, 4, 'Street 4');
+ 2018  205  102.5  45  22.5  85  42.5  85  42.5
+ 2019  245  122.5  225  112.5  165  82.5  125  62.5
+
+
+### --------------------------------                     DQL                -----------------------------------
+
+SELECT * FROM PeopleSavings;
+SELECT *, row_number() from People10M where row_number() = 4
+SELECT  firstName,  middleName,  lastName,  birthDateFROM  People10MWHERE  year(birthDate) > 1990  AND gender = 'F'
+SELECT  firstName,  lastName,  salary,  salary * 0.2 AS savingsFROM  People10M
+SELECT  birthYear,  ROUND(AVG(salary), 2) AS avgSalaryFROM  peopleSavingsGROUP BY  birthYearORDER BY  avgSalary DESC
+SELECT DISTINCT(itemId), amount, aisle, price FROM products ORDER BY aisle DESC, price ASC;  
+
+# This is the function. Each value is checked to see if it **is different** than the value `"Engineering Blog"`. If it is, it gets filtered into the new column, `woEnginieering`
+SELECT
+  categories,
+  FILTER (categories, category -> category <> "Engineering Blog") woEngineering
+FROM DatabricksBlog     
+
+
+# 
+SELECT
+  *
+FROM
+  (
+    SELECT
+      authors, title,
+      FILTER(categories, category -> category = "Engineering Blog") AS blogType
+    FROM
+      DatabricksBlog
+  )
+WHERE
+  size(blogType) > 0
+
+
+# 
+SELECT
+  categories,
+  EXISTS (categories, c -> c = "Company Blog") companyFlag
+FROM DatabricksBlog
+
+
+# 
+SELECT 
+  TRANSFORM(categories, cat -> LOWER(cat)) lwrCategories
+FROM DatabricksBlog
+
+
+# 
+SELECT 
+  temps temps_C,
+  TRANSFORM (temps, t -> ((t * 9) div 5) + 32 ) temps_F
+FROM DeviceData;
+
+#
+SELECT
+  *
+FROM
+  (
+    SELECT
+      month(date) month,
+      REDUCE(co2Level, 0, (c, acc) -> c + acc, acc ->(acc div size(co2Level))) averageCo2Level
+    FROM
+      DeviceData
+  ) PIVOT (
+    avg(averageCo2Level) avg FOR month IN (7 JUL, 8 AUG, 9 SEPT, 10 OCT, 11 NOV)
+	
+
+# 
+SELECT 
+  COALESCE(dc_id, "All data centers") AS dc_id,
+  COALESCE(device_type, "All devices") AS device_type,
+  ROUND(AVG(averageCo2Level))  AS avgCo2Level
+FROM Co2LevelsTemporary
+GROUP BY ROLLUP (dc_id, device_type)
+ORDER BY dc_id, device_type;
+
+
+
+### ------------------------------                     JOINS                -----------------------------------
+SELECT firstName
+FROM PeopleDistinctNames
+JOIN SSADistinctNames ON firstName = ssaFirstName
+
+SELECT count(*)
+FROM PeopleDistinctNames
+JOIN SSADistinctNames ON firstName = ssaFirstName;
+
+
+
+
+#### /////////////////// ------------------- >>>>>>>>>>>>>>>>>>>>>>       T H E    I N T E R V I E W       <<<<<<<<<<<<<<<<<<<<< ------------------- \\\\\\\\\\\\\\\\\\\\
+
+What does a data architect do?
+https://www.indeed.com/career-advice/careers/what-does-a-data-architect-do
+
+Tell me about your skills as Data Architect ?
+https://www.indeed.com/career-advice/careers/what-does-a-data-architect-do
+
+Data architect work environment?
+https://www.indeed.com/career-advice/careers/what-does-a-data-architect-do
+
+
+
+
+
+
+
