@@ -265,6 +265,19 @@ SQL stands for Structured Query Language, which is a standardised language for i
 Aim: Interact with Structured data on Databases.
 SQL is used to perform C.R.U.D (Create, Retrieve, Update & Delete) operations on relational databases.
 
+#### What are SSAS, SSIS, and SSRS?
+Source: https://soltech.net/software-development-technologies/ssas-ssis-ssrs/
+
+#### SSAS:
+	Is Microsoft SQL Server’s Analysis Services which is an online analytical processing (OLAP), data mining and reporting tool used in Business Intelligence to make your data work for you.
+
+#### SSIS:
+	Stands for Sql Server Integration Services. The key power of SSIS is its data transformation and migration capability. When building a data warehouse or a data mart, the data needs to be extracted out of the 	various transactional systems and flat files, transformed and loaded to where it can then be analyzed and reported on. The data extraction, transformation and loading are known as ETL and is a common term in 	data migration and Business Intelligence.
+
+#### SSRS:
+	Stands for Sql Server Reporting Services. Once data is in its final state, either in the native transactional system or transformed into a datamart or datawarehouse, SSRS provides the tools necessary to create 	reports to better understand your data. These three tools are often used together to support your data analysis needs and come part of Microsoft Sql Server and the Microsoft Business Intelligence package.
+
+
 #### SQL_PROCESS
 Aim: Changes SQL instructions into a form understood by the Database.
 01. When an SQL command is executing for any RDBMS, then the system figure out the best way to carry out the request and the SQL engine determines that how to interpret the task.
