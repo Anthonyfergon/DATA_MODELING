@@ -8,6 +8,43 @@ FROM Sales
 SELECT SalesKey, SalesAmount
 FROM Sales
 
+-- Customizable Selection
+SELECT job_title || '-' || last_name
+FROM Employees
+
+-- Select Columns
+SELECT SalesKey, SalesAmount
+FROM Sales
+
+-- Customizable Selection
+SELECT 
+	job_title, (job_title like '%assistant%' is assistant
+FROM
+	data_sci.employees
+WHERE
+	job_title like '%assistance%'
+result: boolean TRUE/FALSE
+
+-- Select Columns
+SELECT SalesKey, SalesAmount
+FROM Sales
+
+-- Customizable Selection
+SELECT 
+	job_title
+FROM
+	data_sci.employees
+WHERE
+	job_title similar to 'vp (a|m)%'
+
+-- Customizable Selection
+SELECT 
+	job_title
+FROM
+	data_sci.employees
+WHERE
+	job_title similar to 'vp (a|m%|web%)'
+
 --Select TOP
 SELECT TOP 10 *
 FROM Sales
@@ -83,18 +120,19 @@ OR RegionCountryName = 'Pakistan'
 -- Renombrar Columnas con un Alias
 
 SELECT
-ColorID ID, -- agregando ID
-ColorName AS Color -- agregando AS
-FROM Product
+	ColorID ID,
+	ColorName AS Color
+FROM
+	Product
 GROUP BY -- al utilizar Group By debo invocar las columnas por su nombre original
-ColorID,
-ColorName
+	ColorID,
+	ColorName
 HAVING
-ColorID >= 10
+	SUM(ColorID) >= 10
 ORDER BY
-ColorID
+	sum(ColorID)
 
--- Alternatively we can use HAVINGlike the following lines:
+-- Alternatively we can use HAVING:
 -- HAVING AVG(p.column_name > 15
 -- AND AVG(p.column_name > 15;
 
@@ -269,6 +307,13 @@ ColorName,
 UPPER(ColorName) AS Mayuscula
 FROM Product
 
+-- INITCAP
+
+SELECT
+ColorName,
+initcap(ColorName) AS FirstCapLetter
+FROM Product
+
 -- REPLACE
 
 SELECT
@@ -298,6 +343,11 @@ ProductName,
 RTRIM(CONCAT(ProductName, SPACE(5))) AS Columna_Producto_Correcta,
 CONCAT(ProductName, SPACE(5)) AS Columna_Producto_Mal
 FROM Product
+
+-- RTRIM + LTRIM
+
+SELECT
+RTRIM(LTRIM('  kELLY  ')) = 'kELLY'
 
 --TRIM
 
@@ -336,6 +386,12 @@ SELECT
 StoreName,
 SUBSTRING(StoreName,CHARINDEX(' ',StoreName),LEN(StoreName)) AS Ciudad
 FROM Stores
+#resultado: las palabras despues del primer espacio en blanco
+
+
+SELECT
+substring('abcdefghijk' from 1 for 3) tes string
+#resultado: abc
 
 -- Funciones de Conversion
 
@@ -376,6 +432,39 @@ DiscountAmount,
 ROUND(DiscountAmount,1) AS Redondeo
 FROM Sales
 
+-- TRUNC
+
+-- Example 1: Truncate a number (removes decimal places)
+SELECT TRUNC(45.923) FROM dual;
+-- Result: 45
+
+-- Example 2: Truncate salary values from employees table
+SELECT employee_id, salary, TRUNC(salary) 
+FROM employees;
+
+-- Example 3: Truncate with specific decimal places
+SELECT TRUNC(45.923, 2) FROM dual;
+-- Result: 45.92
+
+-- Example 4: Truncate dates (removes time component)
+SELECT TRUNC(hire_date) 
+FROM employees;
+
+-- Example 5: Truncate to specific date unit
+SELECT employee_id, 
+       hire_date,
+       TRUNC(hire_date, 'MONTH') -- Truncates to first day of month
+FROM employees;
+
+-- Example 6: Truncate salary to nearest hundred
+SELECT employee_id,
+       salary,
+       TRUNC(salary, -2) -- Negative numbers truncate to left of decimal
+FROM employees;
+
+-- LEVENSHTEIN, SOUNDEX
+--Functions that transforms strings into 4 characters and make calcules comparing 2 strings 
+
 -- Funciones para Nulos
 
 -- COALESCE
@@ -406,12 +495,65 @@ WHERE Cedula = 115400138
 
 -- SQL JOIN
 
--- JOIN
+-- JOIN with WHERE
 
--- Consultamos la tabla Store
+SELECT
+	department_name, count(*)
+FROM
+	employess e
+JOIN
+	company_departments cd
+ON
+	e.department_id = cd.id
+WHERE
+	count(*) > 50
+GROUP BY
+	cd.department_name
+ORDER BY
+	cd_department_name
+	
+-- 3 JOINS WITH CUBE
 
-SELECT *
-FROM Geography
+SELECT
+	country_name,
+	region_name,
+	department_name,
+	count(*)
+FROM
+	employess e
+JOIN
+	company_regions cr
+ON
+	e.region_id = cr.id
+JOIN
+	company_departments cd
+ON
+	e.department_id = cd.id
+GROUP BY
+	CUBE(country_name,
+		 region_name,
+		 department_name)
+ORDER BY
+	country_name,
+	region_name,
+	department_name
+	
+-- JOIN with HAVING
+	
+SELECT
+	department_name, count(*)
+FROM
+	employess e
+JOIN
+	company_departments cd
+ON
+	e.department_id = cd.id
+GROUP BY
+	cd.department_name
+HAVING
+	count(*) > 50
+ORDER BY
+	cd_department_name
 
 -- INNER JOIN [alternatively you can indicate the word: JOIN instead of INNERJOIN]
 
@@ -563,24 +705,26 @@ ON A.DateKey = C.Fecha
 WHERE C.Año = 2019
 
 Select
-B.ChannelName,
-UPPER(LEFT(Mes,3)) AS Mes,
-SUM(SalesAmount) as Venta
-FROM Sales A
+	B.ChannelName,
+	UPPER(LEFT(Mes,3)) AS Mes,
+	SUM(SalesAmount) as Venta
+FROM 
+	Sales A
 INNER JOIN Channel B
-ON A.channelKey	 = B.Channel_Key
+	ON A.channelKey	 = B.Channel_Key
 INNER JOIN Date C
-ON A.DateKey = C.Fecha
-WHERE C.Año = 2019
+	ON A.DateKey = C.Fecha
+WHERE
+	C.Año = 2019
 GROUP BY
-B.ChannelName,
-C.Mes,
-NumeroMes
+	B.ChannelName,
+	C.Mes,
+	NumeroMes
 HAVING
-SUM(SalesAmount) > 20000000
+	SUM(SalesAmount) > 20000000
 ORDER BY
-ChannelName,
-NumeroMes DESC
+	ChannelName,
+	NumeroMes DESC
 
 -- AVG TOTAL Y AVG DISTINTIVA
 
@@ -709,10 +853,15 @@ ORDER BY
 ChannelName,
 NumeroMes DESC
 
--- Funciones Matematicas
+-- SCALAR FUNCTIONS (ROUND, FLOOR, ABS, LOWER, UPPER, POWER, CEIL)
+
+-- CEIL
+SELECT
+	CEIL(AVG(salary))
+FROM
+	employees
 
 -- ABS (Valor Absoluto)
-
 SELECT
 B.ChannelName,
 A.SalesAmount,
@@ -807,9 +956,84 @@ C.Mes,
 C.Año)
 
 
+-- Window Functions (agrupacion de datos granulares)
+
+-- Example 01:
+
+SELECT
+	department_id,
+	last_name,
+	salary,
+	FIRST_VALUE(salary) OVER PARTITION BY department_id ORDER BY salary DESC
+FROM
+	employees
+	
+-- Example 02:
+
+SELECT
+	department_id,
+	salary,
+	ROUND(AVG(salary) OVER (PARTITION BY department_id),2)
+FROM
+	employees
+	
+-- Example 03:
+
+SELECT
+	department_id,
+	salary,
+	NTILE(4) OVER (PARTITION BY department_id ORDER BY salary DESC) AS quartile
+FROM
+	employees
+	
+-- Example 04:
+
+SELECT
+	department_id,
+	last_name,
+	salary,
+	RANK() OVER (PARTITION BY department_id ORDER BY salary DESC)
+FROM
+	employees
+	
+-- Example 05: (For Reconciliations purposes) <LEAD> || <LAG>
+	
+SELECT
+	department_id,
+	last_name,
+	salary,
+	LEAD(salary) OVER (PARTITION BY department_id ORDER BY salary DESC)
+FROM
+	employees
+	
+-- Example 06: 
+	
+SELECT
+	department_id,
+	last_name,
+	salary,
+	WIDTH_BUCKET(salary,0,150000,10) OVER (PARTITION BY department_id ORDER BY salary DESC)
+FROM
+	employees
+
+-- Example 07: ACUMULATED DISTRIBUTION
+	
+SELECT
+	department_id,
+	last_name,
+	salary,
+	ROUND((CUME_DIST() OVER (ORDER BY salary DESC) * 100)::NUMERIC,2) # los :: funcionana como CAST
+FROM
+	employees	
+
 -- Estructuras Complejas
 
 -- Select Anidados o Subconsultas
+
+SELECT
+	round(avg(e1.salary),2)
+FROM
+	(SELECT * FROM employees WHERE salary > 100000) e1
 
 -- Analisis de la Vta de Productos del 1 a 100 en Tiendas de Asia y Europa,
 -- cuando la cantidad de empleados por tienda sea superior a 10
@@ -6741,3 +6965,75 @@ ALTER TABLE [datosbase].[ordenes] ADD Supermercados sql_variant
 
 	select *
 From [datosbase].[ordenes]
+
+
+-- CTE (COMMON TABLES EXPRESSIONS)
+
+-- Example 01:
+
+WITH 
+  region_salaries as 
+    (select
+        e.region_id,
+        sum(e.salary) region_salary
+    from
+        data_sci.employees e
+    group by region_id),
+  top_region_salaries as
+    (select
+        region_id
+    from
+        region_salaries
+    where region_salary > (SELECT SUM(region_salary)/7 from region_salaries))
+  select 
+    *
+  from
+    region_salaries
+  where
+    region_id in (SELECT region_id from top_region_salaries)
+
+-- Example 02:
+
+drop table if exists data_sci.org_structure;
+create table data_sci.org_structure (
+    id integer,
+    department_name text,
+    parent_department_id integer);
+
+
+insert into data_sci.org_structure values
+  (1, 'CEO Office', null),
+  (2, 'VP Sales', 1),
+  (3, 'VP Operations', 1),
+  (4, 'Northeast Sales',2),
+  (5, 'Northwest Sales',2),
+  (6, 'Infrastructure Operations', 3),
+  (7, 'Management Operations', 3);
+
+
+with recursive report_structure(id, department_name,parent_department_id) as
+ (select id,  department_name, parent_department_id 
+  from data_sci.org_structure where id = 7
+ union
+   select os.id, os.department_name, os.parent_department_id 
+    from data_sci.org_structure os
+    join report_structure rs on rs.parent_department_id = os.id
+ )
+ select
+  *
+ from report_structure
+
+
+
+
+with recursive report_structure(id, department_name,parent_department_id) as
+ (select id,  department_name, parent_department_id 
+  from data_sci.org_structure where id = 4
+ union
+   select os.id, os.department_name, os.parent_department_id 
+    from data_sci.org_structure os
+    join report_structure rs on rs.parent_department_id = os.id
+ )
+ select
+  *
+ from report_structure
